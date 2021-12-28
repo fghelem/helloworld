@@ -2,15 +2,18 @@
 pipeline {
     agent any
     stages {
-        stage ('Compile Stage') {
+        stage ('Build') {
 
             steps {
-                  
+                    sh 'mvn -version'               
                     sh 'mvn clean compile'
                  
             }
         }
-         
-         
-    }
+      }
+    post {
+        always {
+            cleanWs()
+        }
+    }  
 }
