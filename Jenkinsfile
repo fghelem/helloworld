@@ -1,9 +1,10 @@
 pipeline {
     agent any
- tools {
+    tools {
           maven 'MAVEN_HOME'
-    }
-  
+          jdk 'JAVA_HOME'
+          }
+     
 
     stages {
         stage("get source code") {
