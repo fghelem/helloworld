@@ -2,7 +2,7 @@ pipeline {
     agent any
  tools {
      jdk 'JAVA_HOME' 
-        maven "3.8.4" // You need to add a maven with name "3.6.0" in the Global Tools Configuration page
+        maven 'MAVEN_HOME'
     }
   
 
